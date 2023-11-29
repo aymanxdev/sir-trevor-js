@@ -109,7 +109,7 @@ var scribePastePlugin = function(block) {
             block.mediator.trigger("block:remove", block.blockID);
           }
 
-          blockToFocus.focusAtEnd();
+          // blockToFocus.focusAtEnd();
 
         } else {
           var node = fakeContent.firstChild;
