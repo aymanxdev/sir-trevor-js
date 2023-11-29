@@ -4,13 +4,18 @@ var selectionRange = require('selection-range');
 
 var utils = require('../../utils');
 
-var selectToEnd = function(scribe) {
-  var selection = new scribe.api.Selection();
-  var range = selection.range.cloneRange();
-  range.setEndAfter(scribe.el.lastChild, 0);
-
+function selectToEnd(scribe) {
+  var range = document.createRange();
+  var lastChild = scribe.el.lastChild;
+  if (lastChild) {
+    range.setEndAfter(lastChild);
+  } else {
+    range.selectNodeContents(scribe.el);
+  }
+  range.collapse(false);
   return range;
-};
+}
+
 
 var isAtStart = function(scribe) {
   var currentRange = selectionRange(scribe.el);

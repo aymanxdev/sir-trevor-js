@@ -25,7 +25,7 @@ module.exports = {
 
   selectText: function() {
     var range = document.createRange();
-    if (this._scribe.allowsBlockElements()) {
+    if (this._scribe.allowsBlockElements() && this._scribe.el.firstChild) {
       range.setStartAfter(this._scribe.el.firstChild, 0);
     } else {
       range.selectNodeContents(this._scribe.el);

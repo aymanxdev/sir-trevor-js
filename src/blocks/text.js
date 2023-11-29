@@ -18,7 +18,7 @@ module.exports = Block.extend({
 
   type: "text",
 
-  editorHTML: '<div class="st-text-block" contenteditable="true"></div>',
+  editorHTML: '<div class="st-text-block" contenteditable="true"><p><br></p></div>',
 
   icon_name: 'text',
 

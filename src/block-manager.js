@@ -72,9 +72,11 @@ Object.assign(BlockManager.prototype, require('./function-bind'), require('./med
 
     if (options.autoFocus) {
       block.focus();
-    } else if (options.focusAtEnd) {
-      block.focusAtEnd();
-    }
+    } 
+    // commenting out to prevent scroll to bottom
+    // else if (options.focusAtEnd) {
+    //   block.focusAtEnd();
+    // }
 
     this.triggerBlockCountUpdate();
     this.mediator.trigger('block:limitReached', this.blockLimitReached());
