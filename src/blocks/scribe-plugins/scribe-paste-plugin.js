@@ -97,7 +97,7 @@ var scribePastePlugin = function(block) {
                 format: 'html',
                 text: node.innerHTML
               };
-              block.mediator.trigger("block:create", 'Text', data, block.el, { autoFocus: true });
+              block.mediator.trigger("block:create", 'Text', data, block.el, { autoFocus: false });
             }
           });
 
@@ -109,7 +109,7 @@ var scribePastePlugin = function(block) {
             block.mediator.trigger("block:remove", block.blockID);
           }
 
-          // blockToFocus.focusAtEnd();
+          // blockToFocus.focusAtStart();
 
         } else {
           var node = fakeContent.firstChild;
