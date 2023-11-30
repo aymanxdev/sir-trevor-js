@@ -127,7 +127,7 @@
   @include st-input;
   @include st-input-active;
   font-size: $text-block-font-size;
-  line-height: 1.45 !important;
+  line-height: 1.45;
   overflow: visible;
 
   .st-block--empty & {
